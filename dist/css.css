@@ -1,0 +1,21 @@
+body,html {
+width: 100%;
+background-color: aqua;
+}
+
+header {
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: brown;
+    height: 80px;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: xx-large;
+}
+
