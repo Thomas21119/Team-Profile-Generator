@@ -3,7 +3,10 @@ const fs = require("fs");
 const Engineer = require("./lib/Engineer");
 const Manager = require("./lib/Manager");
 const Intern = require("./lib/Intern");
-let team = [];
+const HtmlGenerator = require("./src/HtmlGenerator");
+const CardGenerator = require("./src/CardGenerator");
+
+let generatedTeam = "";
 
 function menu() {
   createManager();
@@ -33,10 +36,6 @@ function createTeam() {
     });
 }
 
-function buildTeam() {
-  console.log("Build Team" + team);
-}
-
 function createManager() {
   inquirer
     .prompt(
@@ -50,7 +49,8 @@ function createManager() {
     )
     .then(({ name, id, email, officeNumber }) => {
       let manager = new Manager(name, id, email, officeNumber);
-      team.push(manager);
+      let generator = new CardGenerator();
+      generatedTeam += `${generator.managerGenerator(manager)}`;
       createTeam();
     });
 }
@@ -68,7 +68,8 @@ function createEngineer() {
     )
     .then(({ name, id, email, github }) => {
       let engineer = new Engineer(name, id, email, github);
-      team.push(engineer);
+      let generator = new CardGenerator();
+      generatedTeam += `${generator.engineerGenerator(engineer)}`;
       createTeam();
     });
 }
@@ -86,7 +87,8 @@ function createIntern() {
     )
     .then(({ name, id, email, school }) => {
       let intern = new Intern(name, id, email, school);
-      team.push(intern);
+      let generator = new CardGenerator();
+      generatedTeam += `${generator.internGenerator(intern)}`;
       createTeam();
     });
 }
@@ -113,4 +115,16 @@ function createTeamQuestions(role, customQuestions) {
   ];
 
   return [...compulsaryQuestions, ...customQuestions];
+}
+
+function buildTeam() {
+  let htmlGenerator = new HtmlGenerator();
+  fs.writeFile(
+    "./dist/generatedTeam.html",
+    htmlGenerator.template(generatedTemplate),
+    (err) =>
+      err
+        ? console.log(err)
+        : console.log("Your team has been generated in the 'dist' folder.")
+  );
 }
