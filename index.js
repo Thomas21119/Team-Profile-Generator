@@ -121,7 +121,7 @@ function buildTeam() {
   let htmlGenerator = new HtmlGenerator();
   fs.writeFile(
     "./dist/generatedTeam.html",
-    htmlGenerator.template(generatedTemplate),
+    htmlGenerator.template(generatedTeam),
     (err) =>
       err
         ? console.log(err)

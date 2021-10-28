@@ -1,21 +1,114 @@
-body,html {
-width: 100%;
-background-color: aqua;
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background-color: aqua;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+:root {
+  --borderRadius: 20px;
 }
 
 header {
-    display: flex;
-    width: 80%;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 0 auto;
-    margin-top: 20px;
-    background-color: brown;
-    height: 80px;
+  display: flex;
+  width: 100%;
+  height: 20%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background-color: brown;
+  text-align: center;
 }
 
 h1 {
-    font-weight: bold;
-    font-size: xx-large;
+  font-weight: bold;
+  font-size: xx-large;
 }
 
+main {
+  display: inline-flex;
+  width: 80%;
+  height: 60%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: var(--borderRadius);
+  background-color: chocolate;
+  width: 45%;
+  height: 40%;
+  text-align: center;
+}
+
+.cardHeader {
+  background-color: #fbccd1;
+  border-radius: var(--borderRadius) var(--borderRadius) 0 0;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cardHeader h2 {
+  font-size: 32px;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.cardHeader h3 {
+  font-size: 24px;
+  font-style: normal;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 70%;
+}
+
+ul {
+  width: 90%;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+li {
+  display: flex;
+  width: 100%;
+  height: 25%;
+  background-color: gray;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+}
+
+li span {
+    font-weight: 600;
+}
+
+@media screen and (max-width: 998px) {
+  main {
+    height: 80%;
+  }
+
+  .card {
+    width: 80%;
+    height: 30%;
+  }
+}

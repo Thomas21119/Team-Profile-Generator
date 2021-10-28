@@ -8,9 +8,9 @@ class Generator {
   </div>
   <div class="cardBody">
     <ul>
-      <li> ID: ${team.id} </li>
-      <li> Email: ${team.email} </li>
-      <li> Office Number: ${team.officeNumber} </li>
+      <li> <span> ID: </span> ${team.id} </li>
+      <li> <span> Email: </span> ${team.email} </li>
+      <li> <span> Office Number: </span> ${team.officeNumber} </li>
     </ul>
   </div>
 </div>`;
@@ -25,9 +25,9 @@ class Generator {
     </div>
     <div class="cardBody">
     <ul>
-        <li> ID: ${team.id} </li>
-        <li> Email: ${team.email} </li>
-        <li> Office Number: ${team.officeNumber} </li>
+        <li> <span> ID: </span> ${team.id} </li>
+        <li> <span> Email: </span> ${team.email} </li>
+        <li> <span> Office Number: </span> ${team.officeNumber} </li>
     </ul>
     </div>
 </div>`;
@@ -42,9 +42,9 @@ class Generator {
     </div>
     <div class="cardBody">
     <ul>
-        <li> ID: ${team.id} </li>
-        <li> Email: ${team.email} </li>
-        <li> Office Number: ${team.officeNumber} </li>
+        <li> <span> ID: </span> ${team.id} </li>
+        <li> <span> Email: </span> ${team.email} </li>
+        <li> <span> Office Number: </span> ${team.officeNumber} </li>
     </ul>
     </div>
 </div>`;

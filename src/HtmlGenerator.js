@@ -23,3 +23,4 @@ class HtmlGenerator {
     </html>`;
   };
 }
+module.exports = HtmlGenerator;
