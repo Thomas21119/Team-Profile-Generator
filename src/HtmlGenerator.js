@@ -1,3 +1,5 @@
+// html used with team being the card location
+
 class HtmlGenerator {
   template = (team) => {
     return `

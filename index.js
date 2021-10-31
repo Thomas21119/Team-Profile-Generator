@@ -1,3 +1,5 @@
+// packages
+
 const inquirer = require("inquirer");
 const fs = require("fs");
 const Engineer = require("./lib/Engineer");
@@ -6,12 +8,10 @@ const Intern = require("./lib/Intern");
 const HtmlGenerator = require("./src/HtmlGenerator");
 const CardGenerator = require("./src/CardGenerator");
 
+// text location to push each team member onto
 let generatedTeam = "";
 
-function menu() {
-  createManager();
-}
-
+// inquirer menu options
 function createTeam() {
   inquirer
     .prompt([
@@ -36,6 +36,7 @@ function createTeam() {
     });
 }
 
+// opening Function asking questions for the Manager, saving the options, then opening the menu called create team
 function createManager() {
   inquirer
     .prompt(
@@ -55,6 +56,7 @@ function createManager() {
     });
 }
 
+// opening Function asking questions for the Engineer, saving the options, then opening the menu called create team
 function createEngineer() {
   inquirer
     .prompt(
@@ -74,6 +76,7 @@ function createEngineer() {
     });
 }
 
+// opening Function asking questions for the Intern, saving the options, then opening the menu called create team
 function createIntern() {
   inquirer
     .prompt(
@@ -93,8 +96,7 @@ function createIntern() {
     });
 }
 
-menu();
-
+// basic questions function to save code on the create functions
 function createTeamQuestions(role, customQuestions) {
   const compulsaryQuestions = [
     {
@@ -117,6 +119,7 @@ function createTeamQuestions(role, customQuestions) {
   return [...compulsaryQuestions, ...customQuestions];
 }
 
+// build the html with saved answers
 function buildTeam() {
   let htmlGenerator = new HtmlGenerator();
   fs.writeFile(
@@ -128,3 +131,6 @@ function buildTeam() {
         : console.log("Your team has been generated in the 'dist' folder.")
   );
 }
+
+// on initiation run create manager function
+createManager();

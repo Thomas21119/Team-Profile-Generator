@@ -1,4 +1,13 @@
+// card generator
+
+// team.name puts inputed name into location
+// team.email puts inputed email into location
+// team.officeNumber puts inputed phone number into location
+// team.github puts inputed github user into location
+// team.school puts inputed school into location
+
 class Generator {
+  // manager card
   managerGenerator = (team) => {
     return `
 <div class="card">
@@ -16,6 +25,7 @@ class Generator {
 </div>`;
   };
 
+  // engineer card
   engineerGenerator = (team) => {
     return `
 <div class="card">
@@ -33,6 +43,7 @@ class Generator {
 </div>`;
   };
 
+  // intern card
   internGenerator = (team) => {
     return `
 <div class="card">

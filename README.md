@@ -18,4 +18,12 @@ Install this program by using git clone repository from my github page then loca
 
 Use this program by opening the terminal in the appropriate location and using node index.js and answering the prompts given
 
-github
+### Links
+
+Github: https://github.com/Thomas21119/Team-Profile-Generator
+<br>
+How To Use Video: https://drive.google.com/file/d/1GoMQFu9RqNjzcoxqBTlhlAPCYYlRNhTG/view?usp=sharing
+<br>
+Tests all Passed Video: https://drive.google.com/file/d/1yAmnPPkvaWK-KczL-ZBE-Ci3yxsRPON9/view?usp=sharing
+<br>
+Sample Available dist Folder: https://github.com/Thomas21119/Team-Profile-Generator/blob/main/dist/Sample.html
